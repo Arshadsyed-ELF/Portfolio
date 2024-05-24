@@ -27,9 +27,13 @@ async function connectDB() {
         return null; // Return null if the connection fails
     }
 }
+app.get('/',(req,res)=>{
 
+    res.send("hii");
+})
+        
 // Route to get user data
-app.get('/', async (req, res) => {
+app.get('/userdata', async (req, res) => {
     const db = await connectDB();
     if (db) {
         const collection = db.collection('userdata');
