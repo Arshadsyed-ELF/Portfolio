@@ -4,14 +4,15 @@
     { "src": "index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "index.js" },
-    { "src": "/(.*)", "dest": "index.js" }
+    { "src": "/api/(.*)", "dest": "index.js" }
   ],
-  "functions": {
-    "api/*": {
+  "functions": [
+    {
+      "id": "api",
+      "includeFiles": "api/*",
       "runtime": "nodejs12.x",
       "memory": 1024,
       "timeout": 30
     }
-  }
+  ]
 }
