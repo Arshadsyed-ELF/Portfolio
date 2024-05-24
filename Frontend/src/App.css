@@ -1,0 +1,13 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(6,18,68);
+}
+/* .App {
+} */
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
