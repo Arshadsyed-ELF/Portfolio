@@ -29,7 +29,7 @@ async function connectDB() {
 }
 
 // Route to get user data
-app.get('/userdata', async (req, res) => {
+app.get('/', async (req, res) => {
     const db = await connectDB();
     if (db) {
         const collection = db.collection('userdata');
