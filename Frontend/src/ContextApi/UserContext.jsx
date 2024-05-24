@@ -5,7 +5,7 @@ export const UserContext = createContext();
 
 const UserContextProvider = ({ children }) => {
     const [userData, setUserData] = useState([]);
-
+axios.defaults.withCredintials = true;
     useEffect(() => {
         axios.get('https://portfolio-server-six-lovat.vercel.app/userdata')
         .then((response)=>{
