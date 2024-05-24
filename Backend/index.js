@@ -8,7 +8,7 @@ const port = 8080;
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: 'https://portfolio-client-iota.vercel.app/',
+    origin: '*',
     methods: 'GET,POST,PUT,DELETE,OPTIONS',
 }));
 
