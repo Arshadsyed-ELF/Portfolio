@@ -3,12 +3,12 @@ import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaMapMarke
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import meetingimg from '../assets/Meetingimg.webp';
 import logo from '../assets/logo.png';
+import profilepic '../assests/profilepic.png';
 import axios from 'axios';
 import { UserContext } from '../ContextApi/UserContext';
 
 const Card1 = () => {
 
-  const {userData} =useContext(UserContext)
 
   const cardStyle = {
     backgroundColor: 'rgb(6,18,68)',
@@ -19,7 +19,7 @@ const Card1 = () => {
     fontFamily: 'Arial, sans-serif',
     position: 'relative',
     height: '600px',
-    width: '450px',
+    width: '440px',
     overflow: 'hidden',
     marginTop: '20px',
     boxShadow: '0 0.1em 0.8em -0.5em white',
@@ -176,18 +176,15 @@ const Card1 = () => {
         </div>
         <hr style={hrStyle3} />
         <div style={profileImageContainerStyle}>
-        {userData.map(user => (
-            <img src={user.profilepic} alt="Profile" style={profileImageStyle} />
-))}
+            <img src={profilepic} alt="Profile" style={profileImageStyle} />
         </div>
         <div style={{marginRight:"200px", marginTop:"15px"}}>
-{userData.map(user => (
+
             <div>
   <div key={user.id} style={nameStyle}>Syed Arshad</div>
   <div style={companyStyle}>The SmartBridge</div>
   <div style={titleStyle}>Sofware Developer</div>
   </div>
-))}
         </div>
         <div style={icons}>
         <a href="tel:9505221870"><FaPhoneAlt style={iconStyle} /></a>
