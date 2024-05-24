@@ -31,9 +31,6 @@ app.get('/',(req,res)=>{
     res.send("hii");
 })
 
-app.get('/user',(req,res)=>{
-    res.send("hlo");
-})
 // Route to get user data
 app.get('/userdata', async (req, res) => {
     const db = await connectDB();
