@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt, FaMapMarke
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import meetingimg from '../assets/Meetingimg.webp';
 import logo from '../assets/logo.png';
-import profilepic '../assests/profilepic.png';
+import profilepic '../assests/photo1.jpg';
 import axios from 'axios';
 import { UserContext } from '../ContextApi/UserContext';
 
