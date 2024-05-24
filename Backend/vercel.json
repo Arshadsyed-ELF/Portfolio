@@ -5,14 +5,5 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "index.js" }
-  ],
-  "functions": [
-    {
-      "id": "api",
-      "includeFiles": "api/*",
-      "runtime": "nodejs12.x",
-      "memory": 1024,
-      "timeout": 30
-    }
   ]
 }
