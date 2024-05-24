@@ -183,9 +183,9 @@ const Card1 = () => {
         <div style={{marginRight:"200px", marginTop:"15px"}}>
 {userData.map(user => (
             <div>
-  <div key={user.id} style={nameStyle}>{user.username}</div>
-  <div style={companyStyle}>{user.companyname}</div>
-  <div style={titleStyle}>{user.position}</div>
+  <div key={user.id} style={nameStyle}>{user.username}Syed Arshad</div>
+  <div style={companyStyle}>{user.companyname}The SmartBridge</div>
+  <div style={titleStyle}>{user.position}Sofware Developer</div>
   </div>
 ))}
         </div>
