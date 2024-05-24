@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors({
     origin: ['https://portfolio-client-iota.vercel.app'],
     methods: ['GET'],
-    credentials:true
+     credentials: true
 }));
 
 // MongoDB connection URI from environment variable
