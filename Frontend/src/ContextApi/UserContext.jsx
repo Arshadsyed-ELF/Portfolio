@@ -7,7 +7,7 @@ const UserContextProvider = ({ children }) => {
     const [userData, setUserData] = useState([]);
 
     useEffect(() => {
-        axios.get('https://portfolio-server-six-lovat.vercel.app/userdata')
+        axios.get('https://portfolio-server-six-lovat.vercel.app')
         .then((response)=>{
             setUserData(response.data); // Use response.data to set userData
         })
