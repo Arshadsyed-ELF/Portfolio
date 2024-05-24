@@ -7,10 +7,7 @@ const port = 8080;
 
 // Middleware
 app.use(express.json());
-app.use(cors({
-    origin: 'https://portfolio-client-iota.vercel.app',
-    methods: 'GET,POST,PUT,DELETE,OPTIONS',
-}));
+app.use(cors());
 
 // MongoDB connection URI from environment variable
 const url = 'mongodb+srv://arshad:test123@myportfolio.aoxzyku.mongodb.net/?retryWrites=true&w=majority&appName=myportfolio';
@@ -27,12 +24,13 @@ async function connectDB() {
         return null; // Return null if the connection fails
     }
 }
-app.get('/',(req,res)=>{
-    res.send("hii");
-})
 
 // Route to get user data
 app.get('/userdata', async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://portfolio-client-iota.vercel.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
     const db = await connectDB();
     if (db) {
         const collection = db.collection('userdata');
