@@ -9,7 +9,7 @@ import { UserContext } from '../ContextApi/UserContext';
 
 const Card1 = () => {
 
-
+const {UserData} = useContext(UserContext);
   const cardStyle = {
     backgroundColor: 'rgb(6,18,68)',
     color: '#fff',
