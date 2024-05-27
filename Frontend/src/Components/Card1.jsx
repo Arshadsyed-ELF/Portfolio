@@ -9,6 +9,7 @@ import { UserContext } from '../ContextApi/UserContext';
 
 const Card1 = () => {
 
+  
 const {UserData} = useContext(UserContext);
   const cardStyle = {
     backgroundColor: 'rgb(6,18,68)',
@@ -176,14 +177,15 @@ const {UserData} = useContext(UserContext);
         </div>
         <hr style={hrStyle3} />
         <div style={profileImageContainerStyle}>
-            <img src={profilepic} alt="Profile" style={profileImageStyle} />
+            <img src={userData.profilepic} alt="Profile" style={profileImageStyle} />
         </div>
         <div style={{marginRight:"200px", marginTop:"15px"}}>
 
             <div>
-  <div key={user.id} style={nameStyle}>Syed Arshad</div>
-  <div style={companyStyle}>The SmartBridge</div>
-  <div style={titleStyle}>Sofware Developer</div>
+  <div key={user.id} style={nameStyle}>{userData.name}</div>
+  <div style={companyStyle}>{userData.company}</div>
+  <div style={titleStyle}>{userData.position}
+  </div>
   </div>
         </div>
         <div style={icons}>
